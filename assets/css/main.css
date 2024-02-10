@@ -3531,10 +3531,10 @@ input, select, textarea {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
-			#header a:hover {
-				border-bottom-color: transparent;
-				color: #ff7b00 !important;
-			}
+		#header a:hover {
+			border-bottom-color: transparent;
+			color: #ff7b00 !important;
+		}
 
 		#header strong, #header b {
 			color: #ffffff;
@@ -3576,10 +3576,11 @@ input, select, textarea {
 			visibility: visible;
 		}
 
-			#header .logo:hover {
-				border-color: #18bfef !important;
-				color: #18bfef !important;
-			}
+		#header .logo:hover {
+			border-color: #ff7b00 !important;
+			color: #ffffff !important;
+		}
+
 
 		@media screen and (max-width: 980px) {
 
