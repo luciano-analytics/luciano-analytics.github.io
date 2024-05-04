@@ -72,6 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 p span {
 	padding: 0 5px; /* Ajusta o espaçamento como necessário */
   }
@@ -2614,86 +2615,90 @@ p span {
 
 /* Image */
 
-	.image-container {
-  	  display: flex;
-   	 justify-content: space-around;
-	}
-
-	.image-container img {
-	    flex: 1 1 auto;  /* Cresce e encolhe de acordo com o espaço disponível */
- 	   max-width: 200px; /* Largura máxima para todas as imagens */
-	    height: auto;  /* Altura automática para manter a proporção */
-	}
-
 	.image {
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
-	.image img {
-		display: block;
+	img {
+		width: 70%;   /* Ajusta-se à largura do contêiner pai */
+		height: auto;  /* Altura ajusta-se automaticamente para manter a proporção */
 	}
-
-	.image.left, .image.right {
-		max-width: 40%;
+	.image-container {
+		display: flex;
+		justify-content: space-around;
 	}
-
-	.image.left img, .image.right img {
-		width: 100%;
+	
+	.image-container img {
+		flex: 1 1 auto;  /* Cresce e encolhe de acordo com o espaço disponível */
+		max-width: 300px; /* Largura máxima para todas as imagens */
+		height: auto;  /* Altura automática para manter a proporção */
 	}
+	
+		.image img {
+			display: block;
+		}
 
-	.image.left {
-		float: left;
-		margin: 0 2rem 2rem 0;
-		top: 0.75rem;
-	}
+		.image.left, .image.right {
+			max-width: 100%;
+		}
 
-	.image.right {
-		float: right;
-		margin: 0 0 2rem 2rem;
-		top: 0.75rem;
-	}
+			.image.left img, .image.right img {
+				width: 100%;
+			}
 
-	.image.fit {
-		display: block;
-		margin: 2.5rem 0;
-		width: 100%;
-	}
+		.image.left {
+			float: left;
+			margin: 0 2rem 2rem 0;
+			top: 0.75rem;
+		}
 
-	.image.fit:first-child {
-		margin-top: 0;
-	}
-
-	.image.fit img {
-		width: 100%;
-	}
-
-	.image.main {
-		display: block;
-		margin: 4rem 0;
-		width: 100%;
-	}
-
-	.image.main:first-child {
-		margin-top: 0;
-	}
-
-	.image.main img {
-		width: 100%;
-	}
-
-	@media screen and (max-width: 736px) {
+		.image.right {
+			float: right;
+			margin: 0 0 2rem 2rem;
+			top: 0.75rem;
+		}
 
 		.image.fit {
-			margin: 2rem 0;
+			display: block;
+			margin: 2.5rem 0;
+			width: 100%;
 		}
+
+			.image.fit:first-child {
+				margin-top: 0;
+			}
+
+			.image.fit img {
+				width: 100%;
+			}
 
 		.image.main {
-			margin: 2rem 0;
+			display: block;
+			margin: 4rem 0;
+			width: 100%;
 		}
 
-	}
+			.image.main:first-child {
+				margin-top: 0;
+			}
+
+			.image.main img {
+				width: 100%;
+			}
+
+		@media screen and (max-width: 736px) {
+
+			.image.fit {
+				margin: 2rem 0;
+			}
+
+			.image.main {
+				margin: 2rem 0;
+			}
+
+		}
 
 	a.image {
 		overflow: hidden;
