@@ -15,26 +15,15 @@
 			h3 
 			{
 				color: rgb(0, 0, 0); /* Estilo padrão para todos os H3 */
-				font-family: 'Helvetica';
+				font-family: 'Helvetica','poppins-medium", sans-serif';
+				font-size: 26px;
 			}
 		
 			.destaque 
 			{
 				color: #d10162; /* Estilo específico para H3 com classe 'destaque' */
 			}
-			.textoDestaque 
-			{
-       				color: black;
-		        	font-family: 'poppins-medium", Helvetica, sans-serif';
-		        	font-size: 18px;
-				text-align: justify; /* Justifica o texto */
-            			line-height: 1.5; /* Define o espaçamento entre linhas como 1 */
-        		}
-			#principal 
-			{
-				color: black; /* Estilo específico para H3 com ID 'principal' */
-					font-weight: bold;
-			}
+			
 		</style>
 	</head>
 	<body class="is-preload">
@@ -42,17 +31,18 @@
 	<div id="wrapper" class="fade-in">
 		<div id="intro">
 			<h3 class="destaque">Olá, seja bem-vindo!</h3>
-				<h1 class="capitalized-heading" style="font-size:50px;">
+				<h1 class="capitalized-heading" style="font-size:70px;">
 					Eu sou
 						<br>
 						Luciano Magalhães
 						<br/>
 				</h1>
-				<p>| Cientista de Dados | Analista de Dados | Desenvolvedor Python |</p>
+				<p>|&nbsp;&nbsp;&nbsp;Cientista de Dados&nbsp;&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp;Analista de Dados&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Desenvolvedor Python&nbsp;&nbsp;&nbsp;|</p>
+
 				<p></p>
 				<header id="header">
 					<a href="#header" class="logo">Sobre mim</a>
-					<p></p><p></p>
+					<p></p>
 				</header>
 		</div>
 
@@ -67,8 +57,14 @@
 
 		<div id="main">	
 			<article class="post featured">
+				<h1 class="capitalized-heading" style="font-size:20px;"></h1>
+				<font face="Helvetica"> <font size="5"> <center>
+					<h3 class="destaque">Sobre</h3>
+					<h2> </font> Quem sou</h2>
+
 				<header class="major">
-					<font face="Helvetica"> <font size="5"> <center> 
+					
+
 					<p>
 					Minha paixão pela tecnologia da informação vai além do desenvolvimento de sistemas; ela se estende à exploração dos dados. 
 					A transição para a Ciência de Dados, após concluir uma especialização na PUC Minas, foi natural, 
@@ -86,22 +82,22 @@
 							<h2>ÓBITOS POR DOENÇAS CRÔNICAS<br/>	
 								NÃO TRANSMISSÍVEIS </h2>
 						</header>
-						<img src="images/doenca_cronica_img.png" alt="" />
+						<img src="images/doenca_cronica_img-.png" alt="" />
 				
 						<ul class="actions special">
-							<li><a href="obitos_por_doencas_cronicas.html" class="button"> Ver Projeto  </a> </li>
+							<li><a href="/obitos_por_doencas_cronicas.html" class="button"> Ver Projeto  </a> </li>
 						</ul>
 					</article>
 					<article>
 						<header>
 							<span class="date">Dezembro de 2023</span>
-							<h2>ÓBITOS POR DOENÇAS CRÔNICAS<br/>	
-								NÃO TRANSMISSÍVEIS </h2>
+							<h2>ANÁLISE DE RISCO DE SINISTRO COM TESTE A/B </h2>
 						</header>
-						<img src="images/doenca_cronica_img.png" alt="" />
+					
+						<img src="images/img_test_AB_3-.png" alt="" />
 				
 						<ul class="actions special">
-							<li><a href="https://luciano-analytics.github.io/obitos_por_doencas_cronicas.html" class="button"> Ver Projeto  </a> </li>
+							<li><a href="/obitos_por_doencas_cronicas.html" class="button"> Ver Projeto  </a> </li>
 						</ul>
 					</article>
 				</section>
@@ -123,54 +119,7 @@
 
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+				
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -180,6 +129,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
