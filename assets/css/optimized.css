@@ -109,6 +109,11 @@ button:hover, .button:hover {
     width: 100%;
 
 }
+.posts ul {
+    list-style-type: none; /* Remover o estilo de lista */
+    padding: 0; /* Remover padding */
+    margin: 0; /* Remover margin */
+}
 
 .posts article {
     background-color: #fff;
