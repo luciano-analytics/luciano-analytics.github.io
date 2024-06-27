@@ -6,4 +6,4 @@ This work is licensed under a Creative Commons Attribution 4.0 International Lic
 
 - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-Full license text and information are available at https://creativecommons.org/licenses/by/4.0/
+Full license text and information are available at https://creativecommons.org/licenses/by/4.0/ 
