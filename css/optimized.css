@@ -137,9 +137,12 @@ button:hover, .button:hover {
 }
 
 .posts .image-container img {
+    max-width: 300px;
+    max-height: 300px;
     width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto; /* Centralizar a imagem */
 }
 
 .posts .button {
