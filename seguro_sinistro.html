@@ -14814,7 +14814,13 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h1 id="6.-Carregamento-de-Dados">6. Carregamento de Dados<a class="anchor-link" href="#6.-Carregamento-de-Dados">¶</a></h1>
+<h1 id="6.-Carregamento-de-Dados">6. Carregamento de Dados<a class="anchor-link" href="#6.-Carregamento-de-Dados">¶</a></h1><style>
+.jp-OutputArea-output pre {
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+</style>
 </div>
 </div>
 </div>
@@ -14877,7 +14883,7 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [100]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">### Exibir as primeiras linhas e informações dos dados</span>
@@ -14924,7 +14930,6 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <th>renda_anual</th>
 <th>historico_credito</th>
 <th>...</th>
-<th>valor_seguro</th>
 <th>numero_comodos</th>
 <th>idade_imovel</th>
 <th>material_construcao</th>
@@ -14934,6 +14939,7 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <th>historico_reclamacoes</th>
 <th>tamanho_imovel</th>
 <th>area_m2</th>
+<th>faixa_valor_premio</th>
 </tr>
 </thead>
 <tbody>
@@ -14950,7 +14956,6 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>77826.00</td>
 <td>782</td>
 <td>...</td>
-<td>1938.00</td>
 <td>3</td>
 <td>5</td>
 <td>4</td>
@@ -14960,6 +14965,7 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>0</td>
 <td>5102.04</td>
 <td>75.98</td>
+<td>(3595.655, 4161.1]</td>
 </tr>
 <tr>
 <th>1</th>
@@ -14974,7 +14980,6 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>51997.00</td>
 <td>732</td>
 <td>...</td>
-<td>1670.00</td>
 <td>5</td>
 <td>7</td>
 <td>5</td>
@@ -14984,6 +14989,7 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>0</td>
 <td>10416.67</td>
 <td>32.06</td>
+<td>(762.776, 1333.875]</td>
 </tr>
 <tr>
 <th>2</th>
@@ -14998,7 +15004,6 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>65169.00</td>
 <td>541</td>
 <td>...</td>
-<td>1879.00</td>
 <td>10</td>
 <td>17</td>
 <td>6</td>
@@ -15008,6 +15013,7 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>0</td>
 <td>5494.51</td>
 <td>68.38</td>
+<td>(2464.765, 3030.21]</td>
 </tr>
 <tr>
 <th>3</th>
@@ -15022,7 +15028,6 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>78940.00</td>
 <td>576</td>
 <td>...</td>
-<td>2378.00</td>
 <td>6</td>
 <td>34</td>
 <td>6</td>
@@ -15032,6 +15037,7 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>0</td>
 <td>5494.51</td>
 <td>86.57</td>
+<td>(5291.99, 5857.435]</td>
 </tr>
 <tr>
 <th>4</th>
@@ -15046,7 +15052,6 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>62200.00</td>
 <td>487</td>
 <td>...</td>
-<td>1000.00</td>
 <td>5</td>
 <td>22</td>
 <td>7</td>
@@ -15056,10 +15061,11 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <td>0</td>
 <td>5555.56</td>
 <td>36.00</td>
+<td>(3030.21, 3595.655]</td>
 </tr>
 </tbody>
 </table>
-<p>5 rows × 26 columns</p>
+<p>5 rows × 27 columns</p>
 </div>
 </div>
 </div>
@@ -15068,36 +15074,37 @@ O desafio consiste em analisar um conjunto de dados de propriedades residenciais
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 8000 entries, 0 to 7999
-Data columns (total 26 columns):
- #   Column                 Non-Null Count  Dtype  
----  ------                 --------------  -----  
- 0   cidade_residencia      8000 non-null   object 
- 1   idade_proprietario     8000 non-null   int64  
- 2   valor_imovel           8000 non-null   float64
- 3   tipo_construcao        8000 non-null   object 
- 4   historico_sinistro     8000 non-null   int64  
- 5   valor_premio_seguro    8000 non-null   float64
- 6   sinistro               8000 non-null   int64  
- 7   regiao                 8000 non-null   object 
- 8   renda_anual            8000 non-null   float64
- 9   historico_credito      8000 non-null   int64  
- 10  numero_dependentes     8000 non-null   int64  
- 11  ano_construcao         8000 non-null   int64  
- 12  distancia_bombeiros    8000 non-null   float64
- 13  sistema_alarme         8000 non-null   int64  
- 14  cameras_seguranca      8000 non-null   int64  
- 15  estado                 8000 non-null   object 
- 16  valor_seguro           8000 non-null   float64
- 17  numero_comodos         8000 non-null   int64  
- 18  idade_imovel           8000 non-null   int64  
- 19  material_construcao    8000 non-null   int64  
- 20  seguranca              8000 non-null   int64  
- 21  perfil_seg             8000 non-null   float64
- 22  risco_climatico        8000 non-null   int64  
- 23  historico_reclamacoes  8000 non-null   int64  
- 24  tamanho_imovel         8000 non-null   float64
- 25  area_m2                8000 non-null   float64
-dtypes: float64(8), int64(14), object(4)
+Data columns (total 27 columns):
+ #   Column                 Non-Null Count  Dtype   
+---  ------                 --------------  -----   
+ 0   cidade_residencia      8000 non-null   object  
+ 1   idade_proprietario     8000 non-null   int64   
+ 2   valor_imovel           8000 non-null   float64 
+ 3   tipo_construcao        8000 non-null   object  
+ 4   historico_sinistro     8000 non-null   int64   
+ 5   valor_premio_seguro    8000 non-null   float64 
+ 6   sinistro               8000 non-null   int64   
+ 7   regiao                 8000 non-null   object  
+ 8   renda_anual            8000 non-null   float64 
+ 9   historico_credito      8000 non-null   int64   
+ 10  numero_dependentes     8000 non-null   int64   
+ 11  ano_construcao         8000 non-null   int64   
+ 12  distancia_bombeiros    8000 non-null   float64 
+ 13  sistema_alarme         8000 non-null   int64   
+ 14  cameras_seguranca      8000 non-null   int64   
+ 15  estado                 8000 non-null   object  
+ 16  valor_seguro           8000 non-null   float64 
+ 17  numero_comodos         8000 non-null   int64   
+ 18  idade_imovel           8000 non-null   int64   
+ 19  material_construcao    8000 non-null   int64   
+ 20  seguranca              8000 non-null   int64   
+ 21  perfil_seg             8000 non-null   float64 
+ 22  risco_climatico        8000 non-null   int64   
+ 23  historico_reclamacoes  8000 non-null   int64   
+ 24  tamanho_imovel         8000 non-null   float64 
+ 25  area_m2                8000 non-null   float64 
+ 26  faixa_valor_premio     8000 non-null   category
+dtypes: category(1), float64(8), int64(14), object(4)
 memory usage: 1.6+ MB
 </pre>
 </div>
