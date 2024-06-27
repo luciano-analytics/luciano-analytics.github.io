@@ -16527,15 +16527,14 @@ weighted avg       0.96      0.95      0.95      4085
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=07241ff2-aefc-4fb8-937c-dcacd3fd714f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=baca2124-d585-4731-8565-a19c0b0fb982">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Relat%C3%B3rio-de-Avalia%C3%A7%C3%A3o-do-Modelo">Relatório de Avaliação do Modelo<a class="anchor-link" href="#Relat%C3%B3rio-de-Avalia%C3%A7%C3%A3o-do-Modelo">¶</a></h2><p>Após a aplicação do pré-processamento dos dados, balanceamento com SMOTE e treinamento do modelo utilizando RandomForestClassifier, os resultados do modelo são os seguintes:</p>
-<h3 id="Explica%C3%A7%C3%A3o-das-M%C3%A9tricas-de-Avalia%C3%A7%C3%A3o-do-Modelo">Explicação das Métricas de Avaliação do Modelo<a class="anchor-link" href="#Explica%C3%A7%C3%A3o-das-M%C3%A9tricas-de-Avalia%C3%A7%C3%A3o-do-Modelo">¶</a></h3><p>pan&gt; |</p>
-<table>
+<h3 id="Explica%C3%A7%C3%A3o-das-M%C3%A9tricas-de-Avalia%C3%A7%C3%A3o-do-Modelo">Explicação das Métricas de Avaliação do Modelo<a class="anchor-link" href="#Explica%C3%A7%C3%A3o-das-M%C3%A9tricas-de-Avalia%C3%A7%C3%A3o-do-Modelo">¶</a></h3><table>
 <thead>
 <tr>
 <th>Métrica</th>
@@ -16587,14 +16586,14 @@ weighted avg       0.96      0.95      0.95      4085
 <tr>
 <td><strong>Weighted Avg</strong></td>
 <td>0.96</td>
-<td>Média ponderada do F1-Score, ajustando-se ao desequilíbrio entre as casses.</td>
+<td>Média ponderada do F1-Score, ajustando-se ao desequilíbrio entre as classes.</td>
 </tr>
 </tbody>
 </table>
 <ol>
 <li><p><strong>Desempenho do Modelo</strong>: O modelo apresentou uma <strong>accuracy</strong> de 95%, indicando um excelente desempenho geral. Tanto as classes 0 quanto 1 foram classificadas com alta precisão e recall, resultando em um F1-score de 95% para ambas as classes.</p>
 </li>
-<li><p><strong>Equilíbrio das Classes</strong>: O uso de SMOTE para balanceamento de dados foi eficaz, resultando em uma classificação equilibrada entre as clarelevantes.</p>
+<li><p><strong>Equilíbrio das Classes</strong>: O uso de SMOTE para balanceamento de dados foi eficaz, resultando em uma classificação equilibrada entre as classes 0 e 1.</p>
 </li>
 </ol>
 <h2 id="Conclus%C3%A3o">Conclusão<a class="anchor-link" href="#Conclus%C3%A3o">¶</a></h2><p>O modelo RandomForestClassifier apresentou um excelente desempenho com uma accuracy de 95%, sendo altamente eficaz na previsão de sinistros. A variável mais significativa foi <code>valor_premio_seguro</code>, enquanto as variáveis categóricas relacionadas à localização tiveram pouca importância.</p>
